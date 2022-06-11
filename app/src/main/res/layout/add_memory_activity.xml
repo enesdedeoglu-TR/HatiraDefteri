@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="32dp"
+
+    tools:context=".AddMemory">
+
+
+
+    <ImageButton
+        android:id="@+id/iconButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+
+        android:background="@color/white"
+        android:onClick="uploadImage"
+        android:scaleType="fitXY"
+
+
+        android:src="@mipmap/ic_imageadd" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iconButton"
+        android:ems="10"
+        android:hint="Başlık"
+        android:textStyle="bold"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/mainTextEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_below="@id/iconButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:ems="10"
+        android:hint="Anınızı giriniz"
+        android:inputType="textMultiLine" />
+
+    <AutoCompleteTextView
+        android:id="@+id/locationText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainTextEditText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Konum"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/passwordText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Parola(Opsiyonel)"
+        android:inputType="numberPassword" />
+
+
+    <Button
+        android:id="@+id/saveMemoryButton"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#507BF1"
+        android:onClick="saveMemory"
+        android:text="KAYDET" />
+
+
+
+
+</RelativeLayout>

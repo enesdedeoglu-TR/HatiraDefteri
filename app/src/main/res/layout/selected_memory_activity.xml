@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="32dp"
+
+    tools:context=".AddMemory">
+
+
+
+    <ImageView
+        android:id="@+id/iconImageView"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+
+        android:background="@color/white"
+        android:onClick="uploadImage"
+        android:scaleType="fitXY"
+
+
+        android:src="@mipmap/ic_imageadd" />
+
+    <TextView
+        android:id="@+id/modeTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@id/iconImageView"
+
+
+        android:layout_toRightOf="@id/iconImageView"
+        android:background="@drawable/textview_border"
+        android:ems="10"
+        android:gravity="center"
+        android:padding="5dp"
+         />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/iconImageView"
+
+        android:background="@drawable/textview_border"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:ems="10"
+        android:padding="5dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mainTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/titleTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/textview_border"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:padding="5dp"
+        android:gravity="top" />
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="fill_parent"
+        android:gravity="center_vertical"
+        android:background="@drawable/textview_border"
+        android:layout_height="35dp"
+        android:layout_below="@id/mainTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="fill_parent"
+        android:background="@drawable/textview_border"
+        android:layout_height="35dp"
+        android:layout_below="@id/locationTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center_vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:ems="10" />
+
+
+    <Button
+        android:id="@+id/updateMemoryButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordTextView"
+        android:layout_alignParentStart="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#507BF1"
+        android:onClick="updateMemory"
+        android:text="GÜNCELLE" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/passwordTextView"
+        android:layout_toRightOf="@id/updateMemoryButton"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentRight="true"
+        android:background="#507BF1"
+        android:scaleType="fitXY"
+        android:onClick="sendSMS"
+        android:textSize="11dp"
+        android:text="Paylaş"
+ />
+
+
+</RelativeLayout>

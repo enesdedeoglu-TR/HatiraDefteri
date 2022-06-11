@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/addMemory"
+        tools:ignore="MissingConstraints" />
+
+
+
+        <ImageButton
+            android:id="@+id/addMemory"
+            android:layout_width="75dp"
+
+            android:layout_height="75dp"
+            android:paddingBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:onClick="addMemory"
+            android:src="@drawable/ic_add_foreground">
+
+        </ImageButton>
+
+    <ImageButton
+        android:id="@+id/locationMemory"
+        android:layout_width="60dp"
+        android:layout_toRightOf="@id/addMemory"
+        android:layout_height="60dp"
+        android:layout_marginLeft="95dp"
+        android:layout_alignParentRight="true"
+
+        android:layout_below="@id/recyclerView"
+        android:layout_marginTop="15dp"
+
+        android:background="@color/white"
+        android:onClick="locationMemory"
+        android:src="@mipmap/ic_iocation2">
+
+    </ImageButton>
+
+
+
+</RelativeLayout>
+

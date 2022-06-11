@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="50dp"
+    android:paddingRight="50dp"
+    android:paddingTop="32dp"
+
+    tools:context=".UpdateMemory">
+
+
+
+    <ImageButton
+        android:id="@+id/iconButtonUpdate"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
+
+        android:background="@color/white"
+        android:onClick="uploadUpdatedImage"
+        android:scaleType="fitXY"
+
+
+        android:src="@mipmap/ic_imageadd" />
+
+    <EditText
+        android:id="@+id/titleEditTextUpdate"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iconButtonUpdate"
+        android:ems="10"
+        android:hint="Başlık"
+        android:textStyle="bold"
+        android:inputType="textPersonName" />
+
+
+    <EditText
+        android:id="@+id/mainTextEditTextUpdate"
+        android:layout_width="fill_parent"
+        android:layout_height="280dp"
+        android:layout_below="@id/titleEditTextUpdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="top"
+        android:ems="10"
+        android:hint="Anınızı giriniz"
+        android:inputType="textMultiLine" />
+
+    <AutoCompleteTextView
+        android:id="@+id/locationTextUpdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainTextEditTextUpdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Konum"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/passwordTextUpdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/locationTextUpdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Parola(Opsiyonel)"
+        android:inputType="numberPassword" />
+
+
+    <Button
+        android:id="@+id/saveMemoryButtonUpdate"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/passwordTextUpdate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#507BF1"
+        android:onClick="saveUpdatedMemory"
+        android:text="KAYDET" />
+
+
+
+
+</RelativeLayout>
